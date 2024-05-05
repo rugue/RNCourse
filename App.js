@@ -3,13 +3,16 @@ import { useState } from "react";
 import { StyleSheet, Text, TextInput, View, Button } from "react-native";
 
 export default function App() {
+  // State variables to track the user input and the list of course goals
   const [enteredGoalText, setEnteredGoalText] = useState("");
   const [courseGoals, setCourseGoals] = useState([]);
 
+  // Function to handle the user input for the goal
   function goalInputHandler(enteredText) {
     setEnteredGoalText(enteredText);
   }
 
+  // Function to add the entered goal to the list of course goals
   function addGoalHandler() {
     setCourseGoals((currentCourseGoals) => [
       ...currentCourseGoals,
